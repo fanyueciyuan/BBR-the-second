@@ -913,7 +913,7 @@ static struct tcp_congestion_ops tcp_bbr2_cong_ops __read_mostly = {
 
 static int __init bbr2_register(void)
 {
-	BUILD_BUG_ON(sizeof(struct bbr2) > ICSK_CA_PRIV_SIZE);
+/*	BUILD_BUG_ON(sizeof(struct bbr2) > ICSK_CA_PRIV_SIZE); */
 	return tcp_register_congestion_control(&tcp_bbr2_cong_ops);
 }
 
